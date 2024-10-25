@@ -10,27 +10,53 @@ class Numbers {
     }
   }
   count() {
+    return this.data.length;
     //return the count of numbers in data
   }
   printNumbers() {
+    for (let i = 0; i < this.data.length; i++) {
+      const print = data[i];
+      console.log(`the key is ${[i]} and the value is ${this.data[i]}`);
+    }
     //print the numbers in data
   }
   odds() {
+    let countOdd = [];
+    for (let i = 0; i < this.data.length; i++) {
+      if (this.data[i] % 2 !== 0) {
+        countOdd.push(this.data[i]);
+      }
+    }
+    return Odd;
     //return the odd numbers in data
   }
   evens() {
+    let countEven = [];
+    for (let i = 0; i < this.data.length; i++) {
+      if (this.data[i] % 2 === 0) {
+        countEven.push(this.data[i]);
+      }
+    }
     //return the even numbers in data
   }
   sum() {
-    //return the sum of the numbers
+    const total = this.data.reduce((element, sum) => element + this.sum, 0);
+    return sum 
+    //return the sum of the numb ers
   }
   product() {
+    const product = this.data.reduce((element, sum) => element * sum, 1);
+   return product
     //return the product of the numbers
   }
   greaterThan(target) {
+    const greater = this.data.filter ((number) => number > target);
+   return greater
     //return the numbers greater than the target
   }
   howMany(target) {
+    const greater = this.data.filter((number) => number === target);
+    return greater;
     //return the count of a given number
   }
 }
